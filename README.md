@@ -172,18 +172,6 @@ python scripts/exp_conformal_hybrid.py --device mps
 Each script prints a `VERDICT:` line and writes its own JSON to `outputs/`; results
 are only folded into the paper if they confirm (rules in `integration_drafts.md`).
 
-## Citation
-
-```bibtex
-@article{feiyu2027physical,
-  title   = {Physical-Anchored Abstention: Decomposing the Observability Gap in Low-SNR Acoustic Recognition},
-  author  = {Feiyu, Fan},
-  journal = {Engineering Applications of Artificial Intelligence},
-  year    = {2027},
-  note    = {submitted}
-}
-```
-
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
