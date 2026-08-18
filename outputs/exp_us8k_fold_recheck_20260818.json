@@ -1,0 +1,723 @@
+{
+  "tag": "20260818",
+  "rule": {
+    "threshold": 0.85,
+    "target_classes": [
+      "engine_idling",
+      "jackhammer",
+      "siren",
+      "street_music"
+    ],
+    "note": "\u4e8b\u524d\u56fa\u5b9a\u4e8e\u51bb\u7ed3 fold-10 per-class \u8868\uff08\u03c4=0.5, B11 \u95e8\u5185\uff09; \u5bf9\u5168\u90e8\u65cb\u8f6c\u6298\u56fa\u5b9a, \u9632 per-pass \u8fb9\u754c\u6f02\u79fb"
+  },
+  "folds": {
+    "7": {
+      "n_windows": 11835,
+      "full_10class": {
+        "tau0.0": {
+          "risk": 0.32,
+          "coverage": 0.361,
+          "acc_at_dec": 0.68,
+          "n_decide": 4269,
+          "wilson_ci": [
+            0.306,
+            0.334
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.1": {
+          "risk": 0.32,
+          "coverage": 0.361,
+          "acc_at_dec": 0.68,
+          "n_decide": 4269,
+          "wilson_ci": [
+            0.306,
+            0.334
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.2": {
+          "risk": 0.317,
+          "coverage": 0.359,
+          "acc_at_dec": 0.683,
+          "n_decide": 4245,
+          "wilson_ci": [
+            0.303,
+            0.331
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.3": {
+          "risk": 0.281,
+          "coverage": 0.332,
+          "acc_at_dec": 0.719,
+          "n_decide": 3932,
+          "wilson_ci": [
+            0.267,
+            0.295
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.4": {
+          "risk": 0.233,
+          "coverage": 0.279,
+          "acc_at_dec": 0.767,
+          "n_decide": 3306,
+          "wilson_ci": [
+            0.219,
+            0.248
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.5": {
+          "risk": 0.172,
+          "coverage": 0.218,
+          "acc_at_dec": 0.828,
+          "n_decide": 2583,
+          "wilson_ci": [
+            0.157,
+            0.187
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "per_class": {
+        "air_conditioner": {
+          "acc": 0.297,
+          "n": 232
+        },
+        "car_horn": {
+          "acc": null,
+          "n": 0
+        },
+        "children_playing": {
+          "acc": 0.935,
+          "n": 508
+        },
+        "dog_bark": {
+          "acc": 0.834,
+          "n": 289
+        },
+        "drilling": {
+          "acc": 0.913,
+          "n": 470
+        },
+        "engine_idling": {
+          "acc": 0.894,
+          "n": 350
+        },
+        "gun_shot": {
+          "acc": null,
+          "n": 0
+        },
+        "jackhammer": {
+          "acc": 0.699,
+          "n": 73
+        },
+        "siren": {
+          "acc": 0.887,
+          "n": 512
+        },
+        "street_music": {
+          "acc": 0.725,
+          "n": 149
+        }
+      },
+      "target_classes": [
+        "engine_idling",
+        "jackhammer",
+        "siren",
+        "street_music"
+      ],
+      "derived_target_classes": [
+        "children_playing",
+        "drilling",
+        "engine_idling",
+        "siren"
+      ],
+      "pruned_share": 0.5539,
+      "subset": {
+        "tau0.0": {
+          "risk": 0.143,
+          "coverage": 0.114,
+          "acc_at_dec": 0.857,
+          "n_decide": 1352,
+          "wilson_ci": [
+            0.126,
+            0.163
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.1": {
+          "risk": 0.143,
+          "coverage": 0.114,
+          "acc_at_dec": 0.857,
+          "n_decide": 1352,
+          "wilson_ci": [
+            0.126,
+            0.163
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.2": {
+          "risk": 0.141,
+          "coverage": 0.114,
+          "acc_at_dec": 0.859,
+          "n_decide": 1346,
+          "wilson_ci": [
+            0.124,
+            0.161
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.3": {
+          "risk": 0.116,
+          "coverage": 0.107,
+          "acc_at_dec": 0.884,
+          "n_decide": 1267,
+          "wilson_ci": [
+            0.1,
+            0.135
+          ],
+          "p_onesided": 0.971
+        },
+        "tau0.4": {
+          "risk": 0.096,
+          "coverage": 0.097,
+          "acc_at_dec": 0.904,
+          "n_decide": 1147,
+          "wilson_ci": [
+            0.08,
+            0.114
+          ],
+          "p_onesided": 0.322
+        },
+        "tau0.5": {
+          "risk": 0.061,
+          "coverage": 0.083,
+          "acc_at_dec": 0.939,
+          "n_decide": 986,
+          "wilson_ci": [
+            0.048,
+            0.078
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "ckpt": "clap_ft_us8k_fold7_20260818.pt"
+    },
+    "8": {
+      "n_windows": 11130,
+      "full_10class": {
+        "tau0.0": {
+          "risk": 0.282,
+          "coverage": 0.404,
+          "acc_at_dec": 0.718,
+          "n_decide": 4499,
+          "wilson_ci": [
+            0.269,
+            0.296
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.1": {
+          "risk": 0.282,
+          "coverage": 0.404,
+          "acc_at_dec": 0.718,
+          "n_decide": 4499,
+          "wilson_ci": [
+            0.269,
+            0.296
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.2": {
+          "risk": 0.279,
+          "coverage": 0.401,
+          "acc_at_dec": 0.721,
+          "n_decide": 4465,
+          "wilson_ci": [
+            0.266,
+            0.292
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.3": {
+          "risk": 0.248,
+          "coverage": 0.377,
+          "acc_at_dec": 0.752,
+          "n_decide": 4199,
+          "wilson_ci": [
+            0.235,
+            0.261
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.4": {
+          "risk": 0.2,
+          "coverage": 0.329,
+          "acc_at_dec": 0.8,
+          "n_decide": 3664,
+          "wilson_ci": [
+            0.187,
+            0.213
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.5": {
+          "risk": 0.148,
+          "coverage": 0.274,
+          "acc_at_dec": 0.852,
+          "n_decide": 3052,
+          "wilson_ci": [
+            0.136,
+            0.161
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "per_class": {
+        "air_conditioner": {
+          "acc": 0.34,
+          "n": 97
+        },
+        "car_horn": {
+          "acc": null,
+          "n": 0
+        },
+        "children_playing": {
+          "acc": 0.942,
+          "n": 450
+        },
+        "dog_bark": {
+          "acc": 0.91,
+          "n": 278
+        },
+        "drilling": {
+          "acc": 0.848,
+          "n": 877
+        },
+        "engine_idling": {
+          "acc": 0.8,
+          "n": 130
+        },
+        "gun_shot": {
+          "acc": null,
+          "n": 0
+        },
+        "jackhammer": {
+          "acc": 0.949,
+          "n": 275
+        },
+        "siren": {
+          "acc": 0.834,
+          "n": 812
+        },
+        "street_music": {
+          "acc": 0.774,
+          "n": 133
+        }
+      },
+      "target_classes": [
+        "engine_idling",
+        "jackhammer",
+        "siren",
+        "street_music"
+      ],
+      "derived_target_classes": [
+        "children_playing",
+        "dog_bark",
+        "jackhammer"
+      ],
+      "pruned_share": 0.5445,
+      "subset": {
+        "tau0.0": {
+          "risk": 0.09,
+          "coverage": 0.135,
+          "acc_at_dec": 0.91,
+          "n_decide": 1502,
+          "wilson_ci": [
+            0.076,
+            0.105
+          ],
+          "p_onesided": 0.096
+        },
+        "tau0.1": {
+          "risk": 0.09,
+          "coverage": 0.135,
+          "acc_at_dec": 0.91,
+          "n_decide": 1502,
+          "wilson_ci": [
+            0.076,
+            0.105
+          ],
+          "p_onesided": 0.096
+        },
+        "tau0.2": {
+          "risk": 0.089,
+          "coverage": 0.134,
+          "acc_at_dec": 0.911,
+          "n_decide": 1496,
+          "wilson_ci": [
+            0.076,
+            0.104
+          ],
+          "p_onesided": 0.076
+        },
+        "tau0.3": {
+          "risk": 0.083,
+          "coverage": 0.131,
+          "acc_at_dec": 0.917,
+          "n_decide": 1459,
+          "wilson_ci": [
+            0.07,
+            0.098
+          ],
+          "p_onesided": 0.015
+        },
+        "tau0.4": {
+          "risk": 0.069,
+          "coverage": 0.121,
+          "acc_at_dec": 0.931,
+          "n_decide": 1351,
+          "wilson_ci": [
+            0.057,
+            0.084
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.5": {
+          "risk": 0.055,
+          "coverage": 0.109,
+          "acc_at_dec": 0.945,
+          "n_decide": 1212,
+          "wilson_ci": [
+            0.044,
+            0.07
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "ckpt": "clap_ft_us8k_fold8_20260818.pt"
+    },
+    "9": {
+      "n_windows": 11490,
+      "full_10class": {
+        "tau0.0": {
+          "risk": 0.211,
+          "coverage": 0.428,
+          "acc_at_dec": 0.789,
+          "n_decide": 4918,
+          "wilson_ci": [
+            0.2,
+            0.223
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.1": {
+          "risk": 0.211,
+          "coverage": 0.428,
+          "acc_at_dec": 0.789,
+          "n_decide": 4918,
+          "wilson_ci": [
+            0.2,
+            0.223
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.2": {
+          "risk": 0.208,
+          "coverage": 0.426,
+          "acc_at_dec": 0.792,
+          "n_decide": 4895,
+          "wilson_ci": [
+            0.197,
+            0.219
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.3": {
+          "risk": 0.179,
+          "coverage": 0.405,
+          "acc_at_dec": 0.821,
+          "n_decide": 4650,
+          "wilson_ci": [
+            0.168,
+            0.19
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.4": {
+          "risk": 0.131,
+          "coverage": 0.365,
+          "acc_at_dec": 0.869,
+          "n_decide": 4190,
+          "wilson_ci": [
+            0.121,
+            0.141
+          ],
+          "p_onesided": 1.0
+        },
+        "tau0.5": {
+          "risk": 0.087,
+          "coverage": 0.308,
+          "acc_at_dec": 0.913,
+          "n_decide": 3540,
+          "wilson_ci": [
+            0.078,
+            0.097
+          ],
+          "p_onesided": 0.005
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "per_class": {
+        "air_conditioner": {
+          "acc": 0.87,
+          "n": 261
+        },
+        "car_horn": {
+          "acc": null,
+          "n": 0
+        },
+        "children_playing": {
+          "acc": 0.964,
+          "n": 647
+        },
+        "dog_bark": {
+          "acc": 0.915,
+          "n": 342
+        },
+        "drilling": {
+          "acc": 0.878,
+          "n": 508
+        },
+        "engine_idling": {
+          "acc": 0.873,
+          "n": 102
+        },
+        "gun_shot": {
+          "acc": null,
+          "n": 0
+        },
+        "jackhammer": {
+          "acc": 0.897,
+          "n": 806
+        },
+        "siren": {
+          "acc": 0.951,
+          "n": 671
+        },
+        "street_music": {
+          "acc": 0.847,
+          "n": 203
+        }
+      },
+      "target_classes": [
+        "engine_idling",
+        "jackhammer",
+        "siren",
+        "street_music"
+      ],
+      "derived_target_classes": [
+        "air_conditioner",
+        "children_playing",
+        "dog_bark",
+        "drilling",
+        "engine_idling",
+        "jackhammer",
+        "siren"
+      ],
+      "pruned_share": 0.5392,
+      "subset": {
+        "tau0.0": {
+          "risk": 0.063,
+          "coverage": 0.175,
+          "acc_at_dec": 0.937,
+          "n_decide": 2009,
+          "wilson_ci": [
+            0.053,
+            0.075
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.1": {
+          "risk": 0.063,
+          "coverage": 0.175,
+          "acc_at_dec": 0.937,
+          "n_decide": 2009,
+          "wilson_ci": [
+            0.053,
+            0.075
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.2": {
+          "risk": 0.062,
+          "coverage": 0.175,
+          "acc_at_dec": 0.938,
+          "n_decide": 2007,
+          "wilson_ci": [
+            0.053,
+            0.074
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.3": {
+          "risk": 0.046,
+          "coverage": 0.169,
+          "acc_at_dec": 0.954,
+          "n_decide": 1943,
+          "wilson_ci": [
+            0.038,
+            0.057
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.4": {
+          "risk": 0.027,
+          "coverage": 0.161,
+          "acc_at_dec": 0.973,
+          "n_decide": 1846,
+          "wilson_ci": [
+            0.021,
+            0.036
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.5": {
+          "risk": 0.013,
+          "coverage": 0.143,
+          "acc_at_dec": 0.987,
+          "n_decide": 1643,
+          "wilson_ci": [
+            0.008,
+            0.019
+          ],
+          "p_onesided": 0.0
+        },
+        "tau0.7": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        },
+        "tau0.9": {
+          "risk": null,
+          "coverage": 0.0,
+          "acc_at_dec": null,
+          "n_decide": 0,
+          "wilson_ci": null,
+          "p_onesided": null
+        }
+      },
+      "ckpt": "clap_ft_us8k_fold9_20260818.pt"
+    }
+  },
+  "validate": {
+    "status": "OK",
+    "fold10_full_tau0.5": {
+      "risk": 0.136,
+      "coverage": 0.303,
+      "acc_at_dec": 0.864,
+      "n_decide": 3565,
+      "wilson_ci": [
+        0.125,
+        0.147
+      ],
+      "p_onesided": 1.0
+    },
+    "fold10_subset_tau0.5": {
+      "risk": 0.005,
+      "coverage": 0.158,
+      "acc_at_dec": 0.995,
+      "n_decide": 1863,
+      "wilson_ci": [
+        0.003,
+        0.01
+      ],
+      "p_onesided": 0.0
+    }
+  }
+}
