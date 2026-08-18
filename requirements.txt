@@ -1,0 +1,8 @@
+torch==2.12.1
+numpy==2.4.3
+scipy==1.18.0
+pyarrow==24.0.0
+matplotlib==3.11.0
+soundfile==0.14.0
+transformers==5.9.0
+pytest==8.4.2

@@ -1,0 +1,119 @@
+{
+  "tag": "20260816",
+  "dataset": "sc10",
+  "model": "laion/clap-htsat-unfused",
+  "epochs": 4,
+  "lr": 0.0001,
+  "batch": 16,
+  "freeze_blocks": 8,
+  "seed": 20260803,
+  "device": "mps",
+  "n_train_clips": 30769,
+  "ckpt": "/Users/yufeifan/Documents/papers/eaai/project/scripts/../outputs/checkpoints_clap_finetune/clap_ft_sc10_20260816.pt",
+  "verdict": "CEILING_LIFTED",
+  "interpretation": "acc_at_dec \u2265 0.822 \u2192 \u5929\u82b1\u677f\u62ac\u8d77, \u5934\u6761\u8f6c\u6b63, \u91cd\u5199\u5b9e\u9a8c/\u8ba8\u8bba; < 0.822 \u2192 \u4efb\u52a1\u5b9a\u4e49\u5929\u82b1\u677f\u83b7\u5f3a\u8868\u793a\u7ea7\u8bc1\u636e, \u53d9\u4e8b\u52a0\u5f3a",
+  "counterfactual": {
+    "to_beat_anchor": 0.822,
+    "to_reach_alpha": 0.9,
+    "sontra_a_ref": 0.58,
+    "clap_zs_ref": 0.181
+  },
+  "evaluation": {
+    "clean_ceiling": 0.959,
+    "rows": {
+      "tau0.0": {
+        "gap": 0.126,
+        "risk": 0.226,
+        "coverage": 0.155,
+        "acc_at_dec": 0.774
+      },
+      "tau0.1": {
+        "gap": 0.126,
+        "risk": 0.226,
+        "coverage": 0.155,
+        "acc_at_dec": 0.774
+      },
+      "tau0.2": {
+        "gap": 0.125,
+        "risk": 0.225,
+        "coverage": 0.155,
+        "acc_at_dec": 0.775
+      },
+      "tau0.3": {
+        "gap": 0.097,
+        "risk": 0.197,
+        "coverage": 0.148,
+        "acc_at_dec": 0.803
+      },
+      "tau0.4": {
+        "gap": 0.047,
+        "risk": 0.147,
+        "coverage": 0.135,
+        "acc_at_dec": 0.853
+      },
+      "tau0.5": {
+        "gap": 0.005,
+        "risk": 0.105,
+        "coverage": 0.123,
+        "acc_at_dec": 0.895
+      },
+      "tau0.7": {
+        "gap": -0.058,
+        "risk": 0.042,
+        "coverage": 0.105,
+        "acc_at_dec": 0.958
+      },
+      "tau0.9": {
+        "gap": -0.094,
+        "risk": 0.006,
+        "coverage": 0.029,
+        "acc_at_dec": 0.994
+      }
+    },
+    "best_tau": "tau0.9",
+    "per_class": {
+      "yes": {
+        "acc": 0.938,
+        "n": 608
+      },
+      "no": {
+        "acc": 0.862,
+        "n": 441
+      },
+      "up": {
+        "acc": 0.82,
+        "n": 1437
+      },
+      "down": {
+        "acc": 0.919,
+        "n": 953
+      },
+      "left": {
+        "acc": 0.871,
+        "n": 482
+      },
+      "right": {
+        "acc": 0.902,
+        "n": 665
+      },
+      "on": {
+        "acc": 0.912,
+        "n": 853
+      },
+      "off": {
+        "acc": 0.897,
+        "n": 920
+      },
+      "stop": {
+        "acc": 0.973,
+        "n": 979
+      },
+      "go": {
+        "acc": 0.829,
+        "n": 187
+      }
+    },
+    "n_windows": 61110,
+    "n_clips": 4074
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "ckpt": "sontra_a_ep23.pt",
+  "r_min_db": -11.08,
+  "detectors": {
+    "B0_energy": {
+      "gap": 0.085,
+      "risk": 0.185,
+      "coverage": 0.425,
+      "c_phys": 0.6,
+      "viol": 0.079
+    },
+    "B11_sp": {
+      "gap": 0.134,
+      "risk": 0.234,
+      "coverage": 0.471,
+      "c_phys": 0.6,
+      "viol": 0.11
+    },
+    "oracle": {
+      "gap": -0.1,
+      "risk": 0.0,
+      "coverage": 0.6,
+      "viol": 0.0
+    },
+    "B11a_sp_oracle_thr": {
+      "gap": -0.1,
+      "risk": 0.0,
+      "coverage": 0.6,
+      "viol": 0.0
+    }
+  },
+  "systems": {
+    "B12_tau0.05": {
+      "gap": 0.4,
+      "risk": 0.5,
+      "coverage": 0.604,
+      "acc_at_dec": 0.5,
+      "n_decide": 7111,
+      "viol": 0.004
+    },
+    "B12_tau0.10": {
+      "gap": 0.4,
+      "risk": 0.5,
+      "coverage": 0.604,
+      "acc_at_dec": 0.5,
+      "n_decide": 7111,
+      "viol": 0.004
+    },
+    "B12_tau0.20": {
+      "gap": 0.399,
+      "risk": 0.499,
+      "coverage": 0.602,
+      "acc_at_dec": 0.501,
+      "n_decide": 7090,
+      "viol": 0.004
+    },
+    "B12_tau0.30": {
+      "gap": 0.393,
+      "risk": 0.493,
+      "coverage": 0.572,
+      "acc_at_dec": 0.507,
+      "n_decide": 6736,
+      "viol": 0.004
+    },
+    "B12_tau0.40": {
+      "gap": 0.365,
+      "risk": 0.465,
+      "coverage": 0.494,
+      "acc_at_dec": 0.535,
+      "n_decide": 5811,
+      "viol": 0.003
+    },
+    "B12_tau0.50": {
+      "gap": 0.32,
+      "risk": 0.42,
+      "coverage": 0.424,
+      "acc_at_dec": 0.58,
+      "n_decide": 4996,
+      "viol": 0.003
+    },
+    "B12_tau0.60": {
+      "gap": 0.292,
+      "risk": 0.392,
+      "coverage": 0.386,
+      "acc_at_dec": 0.608,
+      "n_decide": 4546,
+      "viol": 0.003
+    },
+    "B12_tau0.70": {
+      "gap": 0.263,
+      "risk": 0.363,
+      "coverage": 0.346,
+      "acc_at_dec": 0.637,
+      "n_decide": 4070,
+      "viol": 0.003
+    },
+    "B12_tau0.80": {
+      "gap": 0.227,
+      "risk": 0.327,
+      "coverage": 0.304,
+      "acc_at_dec": 0.673,
+      "n_decide": 3581,
+      "viol": 0.002
+    },
+    "B12_tau0.90": {
+      "gap": 0.168,
+      "risk": 0.268,
+      "coverage": 0.248,
+      "acc_at_dec": 0.732,
+      "n_decide": 2917,
+      "viol": 0.002
+    },
+    "B12_tau0.95": {
+      "gap": 0.125,
+      "risk": 0.225,
+      "coverage": 0.204,
+      "acc_at_dec": 0.775,
+      "n_decide": 2402,
+      "viol": 0.002
+    },
+    "B12a_true_snr": {
+      "gap": 0.322,
+      "risk": 0.422,
+      "coverage": 0.422,
+      "acc_at_dec": 0.578,
+      "n_decide": 4965,
+      "viol": 0.0
+    },
+    "B13_phys_only": {
+      "gap": 0.4,
+      "risk": 0.5,
+      "coverage": 0.604,
+      "acc_at_dec": 0.5,
+      "n_decide": 7113,
+      "viol": 0.004
+    }
+  },
+  "per_kind": {
+    "wind": {
+      "gap": 0.29,
+      "risk": 0.39,
+      "coverage": 0.436,
+      "acc_at_dec": 0.61,
+      "n_decide": 1711
+    },
+    "occlusion": {
+      "gap": 0.371,
+      "risk": 0.471,
+      "coverage": 0.418,
+      "acc_at_dec": 0.529,
+      "n_decide": 1639
+    },
+    "self_motion": {
+      "gap": 0.3,
+      "risk": 0.4,
+      "coverage": 0.419,
+      "acc_at_dec": 0.6,
+      "n_decide": 1646
+    }
+  },
+  "heatmap": {
+    "air_conditioner": {
+      "-25": {
+        "n": 300,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 300,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-5": {
+        "n": 300,
+        "acc_at_dec": 0.558,
+        "n_decide": 199
+      },
+      "5": {
+        "n": 300,
+        "acc_at_dec": 0.418,
+        "n_decide": 220
+      },
+      "15": {
+        "n": 300,
+        "acc_at_dec": 0.522,
+        "n_decide": 230
+      }
+    },
+    "car_horn": {
+      "-25": {
+        "n": 69,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 69,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-5": {
+        "n": 69,
+        "acc_at_dec": 0.22,
+        "n_decide": 41
+      },
+      "5": {
+        "n": 69,
+        "acc_at_dec": 0.243,
+        "n_decide": 37
+      },
+      "15": {
+        "n": 69,
+        "acc_at_dec": 0.391,
+        "n_decide": 46
+      }
+    },
+    "children_playing": {
+      "-25": {
+        "n": 297,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 297,
+        "acc_at_dec": 1.0,
+        "n_decide": 5
+      },
+      "-5": {
+        "n": 297,
+        "acc_at_dec": 0.74,
+        "n_decide": 235
+      },
+      "5": {
+        "n": 297,
+        "acc_at_dec": 0.81,
+        "n_decide": 237
+      },
+      "15": {
+        "n": 297,
+        "acc_at_dec": 0.741,
+        "n_decide": 243
+      }
+    },
+    "dog_bark": {
+      "-25": {
+        "n": 237,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 237,
+        "acc_at_dec": 1.0,
+        "n_decide": 7
+      },
+      "-5": {
+        "n": 237,
+        "acc_at_dec": 0.796,
+        "n_decide": 196
+      },
+      "5": {
+        "n": 237,
+        "acc_at_dec": 0.824,
+        "n_decide": 199
+      },
+      "15": {
+        "n": 237,
+        "acc_at_dec": 0.793,
+        "n_decide": 198
+      }
+    },
+    "drilling": {
+      "-25": {
+        "n": 285,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 285,
+        "acc_at_dec": 0.0,
+        "n_decide": 1
+      },
+      "-5": {
+        "n": 285,
+        "acc_at_dec": 0.606,
+        "n_decide": 198
+      },
+      "5": {
+        "n": 285,
+        "acc_at_dec": 0.568,
+        "n_decide": 183
+      },
+      "15": {
+        "n": 285,
+        "acc_at_dec": 0.518,
+        "n_decide": 191
+      }
+    },
+    "engine_idling": {
+      "-25": {
+        "n": 279,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 279,
+        "acc_at_dec": 1.0,
+        "n_decide": 9
+      },
+      "-5": {
+        "n": 279,
+        "acc_at_dec": 0.567,
+        "n_decide": 171
+      },
+      "5": {
+        "n": 279,
+        "acc_at_dec": 0.446,
+        "n_decide": 157
+      },
+      "15": {
+        "n": 279,
+        "acc_at_dec": 0.319,
+        "n_decide": 216
+      }
+    },
+    "gun_shot": {
+      "-25": {
+        "n": 60,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 60,
+        "acc_at_dec": 1.0,
+        "n_decide": 7
+      },
+      "-5": {
+        "n": 60,
+        "acc_at_dec": 0.855,
+        "n_decide": 55
+      },
+      "5": {
+        "n": 60,
+        "acc_at_dec": 0.964,
+        "n_decide": 55
+      },
+      "15": {
+        "n": 60,
+        "acc_at_dec": 0.943,
+        "n_decide": 53
+      }
+    },
+    "jackhammer": {
+      "-25": {
+        "n": 282,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 282,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-5": {
+        "n": 282,
+        "acc_at_dec": 0.53,
+        "n_decide": 215
+      },
+      "5": {
+        "n": 282,
+        "acc_at_dec": 0.555,
+        "n_decide": 211
+      },
+      "15": {
+        "n": 282,
+        "acc_at_dec": 0.491,
+        "n_decide": 234
+      }
+    },
+    "siren": {
+      "-25": {
+        "n": 246,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 246,
+        "acc_at_dec": 0.5,
+        "n_decide": 4
+      },
+      "-5": {
+        "n": 246,
+        "acc_at_dec": 0.673,
+        "n_decide": 211
+      },
+      "5": {
+        "n": 246,
+        "acc_at_dec": 0.668,
+        "n_decide": 217
+      },
+      "15": {
+        "n": 246,
+        "acc_at_dec": 0.675,
+        "n_decide": 200
+      }
+    },
+    "street_music": {
+      "-25": {
+        "n": 300,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-15": {
+        "n": 300,
+        "acc_at_dec": null,
+        "n_decide": 0
+      },
+      "-5": {
+        "n": 300,
+        "acc_at_dec": 0.0,
+        "n_decide": 104
+      },
+      "5": {
+        "n": 300,
+        "acc_at_dec": 0.039,
+        "n_decide": 102
+      },
+      "15": {
+        "n": 300,
+        "acc_at_dec": 0.055,
+        "n_decide": 109
+      }
+    }
+  },
+  "clean_ceiling": {
+    "top1": 0.452,
+    "top2": 0.55,
+    "top3": 0.662,
+    "n": 785
+  },
+  "topk_decidable": {
+    "top1": 0.5,
+    "top2": 0.61,
+    "top3": 0.733
+  },
+  "n_windows": 11775,
+  "n_clips": 785
+}

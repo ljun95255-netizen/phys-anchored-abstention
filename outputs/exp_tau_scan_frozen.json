@@ -1,0 +1,69 @@
+{
+ "frozen_equivalent": false,
+ "B12_tau0.05": {
+  "gap": 0.394,
+  "risk": 0.494,
+  "coverage": 0.612,
+  "acc_at_dec": 0.506
+ },
+ "B12_tau0.1": {
+  "gap": 0.394,
+  "risk": 0.494,
+  "coverage": 0.611,
+  "acc_at_dec": 0.506
+ },
+ "B12_tau0.2": {
+  "gap": 0.39,
+  "risk": 0.49,
+  "coverage": 0.601,
+  "acc_at_dec": 0.51
+ },
+ "B12_tau0.3": {
+  "gap": 0.379,
+  "risk": 0.479,
+  "coverage": 0.577,
+  "acc_at_dec": 0.521
+ },
+ "B12_tau0.4": {
+  "gap": 0.364,
+  "risk": 0.464,
+  "coverage": 0.54,
+  "acc_at_dec": 0.536
+ },
+ "B12_tau0.5": {
+  "gap": 0.346,
+  "risk": 0.446,
+  "coverage": 0.495,
+  "acc_at_dec": 0.554
+ },
+ "B12_tau0.6": {
+  "gap": 0.328,
+  "risk": 0.428,
+  "coverage": 0.443,
+  "acc_at_dec": 0.572
+ },
+ "B12_tau0.7": {
+  "gap": 0.306,
+  "risk": 0.406,
+  "coverage": 0.385,
+  "acc_at_dec": 0.594
+ },
+ "B12_tau0.8": {
+  "gap": 0.274,
+  "risk": 0.374,
+  "coverage": 0.322,
+  "acc_at_dec": 0.626
+ },
+ "B12_tau0.9": {
+  "gap": 0.227,
+  "risk": 0.327,
+  "coverage": 0.242,
+  "acc_at_dec": 0.673
+ },
+ "B12_tau0.95": {
+  "gap": 0.184,
+  "risk": 0.284,
+  "coverage": 0.183,
+  "acc_at_dec": 0.716
+ }
+}

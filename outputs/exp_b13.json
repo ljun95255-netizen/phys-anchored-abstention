@@ -1,0 +1,17 @@
+{
+  "B13_snr_only": {
+    "gap": 0.394,
+    "risk": 0.494,
+    "coverage": 0.612,
+    "acc_at_dec": 0.506,
+    "n_decide": 4139,
+    "n_total": 6765
+  },
+  "compare": {
+    "oracle": -0.1,
+    "B11a": -0.1,
+    "B12_tau05": 0.351,
+    "B12_tau095": 0.184
+  },
+  "note": "B13 = AFRule(tau=0.0): \u5f03\u6743\u4ec5\u7531 P_D(A-Head SNR\u0302)\u22651\u2212\u03b1_k \u51b3\u5b9a, \u65e0\u6982\u7387\u9608\u503c"
+}

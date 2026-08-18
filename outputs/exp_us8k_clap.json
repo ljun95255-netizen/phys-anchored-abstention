@@ -1,0 +1,97 @@
+{
+  "zero_shot": {
+    "top1_all": 0.127,
+    "top1_phys": 0.132,
+    "n_phys": 7065
+  },
+  "rule_rows": {
+    "tau0.0": {
+      "gap": 0.721,
+      "risk": 0.821,
+      "coverage": 0.471,
+      "acc_at_dec": 0.179
+    },
+    "tau0.1": {
+      "gap": 0.721,
+      "risk": 0.821,
+      "coverage": 0.471,
+      "acc_at_dec": 0.179
+    },
+    "tau0.2": {
+      "gap": 0.719,
+      "risk": 0.819,
+      "coverage": 0.464,
+      "acc_at_dec": 0.181
+    },
+    "tau0.3": {
+      "gap": 0.201,
+      "risk": 0.301,
+      "coverage": 0.008,
+      "acc_at_dec": 0.699
+    },
+    "tau0.4": {
+      "gap": -0.1,
+      "risk": 0.0,
+      "coverage": 0.003,
+      "acc_at_dec": 1.0
+    },
+    "tau0.5": {
+      "gap": -0.1,
+      "risk": 0.0,
+      "coverage": 0.001,
+      "acc_at_dec": 1.0
+    }
+  },
+  "per_class_phys": {
+    "air_conditioner": {
+      "hit": 0,
+      "n": 900,
+      "acc": 0.0
+    },
+    "car_horn": {
+      "hit": 0,
+      "n": 207,
+      "acc": 0.0
+    },
+    "children_playing": {
+      "hit": 0,
+      "n": 891,
+      "acc": 0.0
+    },
+    "dog_bark": {
+      "hit": 5,
+      "n": 711,
+      "acc": 0.007
+    },
+    "drilling": {
+      "hit": 0,
+      "n": 855,
+      "acc": 0.0
+    },
+    "engine_idling": {
+      "hit": 0,
+      "n": 837,
+      "acc": 0.0
+    },
+    "gun_shot": {
+      "hit": 12,
+      "n": 180,
+      "acc": 0.067
+    },
+    "jackhammer": {
+      "hit": 846,
+      "n": 846,
+      "acc": 1.0
+    },
+    "siren": {
+      "hit": 70,
+      "n": 738,
+      "acc": 0.095
+    },
+    "street_music": {
+      "hit": 0,
+      "n": 900,
+      "acc": 0.0
+    }
+  }
+}

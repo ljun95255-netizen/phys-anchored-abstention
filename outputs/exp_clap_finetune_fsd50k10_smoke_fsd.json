@@ -1,0 +1,78 @@
+{
+  "tag": "smoke_fsd",
+  "dataset": "fsd50k10",
+  "model": "laion/clap-htsat-unfused",
+  "epochs": 6,
+  "lr": 0.0001,
+  "batch": 16,
+  "freeze_blocks": 8,
+  "seed": 20260803,
+  "device": "mps",
+  "n_train_clips": 256,
+  "ckpt": "/Users/yufeifan/Documents/papers/eaai/project/scripts/../outputs/checkpoints_clap_finetune/clap_ft_fsd50k10_smoke_fsd.pt",
+  "verdict": "CEILING_CONFIRMED",
+  "interpretation": "acc_at_dec \u2265 0.822 \u2192 \u5929\u82b1\u677f\u62ac\u8d77, \u5934\u6761\u8f6c\u6b63, \u91cd\u5199\u5b9e\u9a8c/\u8ba8\u8bba; < 0.822 \u2192 \u4efb\u52a1\u5b9a\u4e49\u5929\u82b1\u677f\u83b7\u5f3a\u8868\u793a\u7ea7\u8bc1\u636e, \u53d9\u4e8b\u52a0\u5f3a",
+  "counterfactual": {
+    "to_beat_anchor": 0.822,
+    "to_reach_alpha": 0.9,
+    "sontra_a_ref": 0.58,
+    "clap_zs_ref": 0.181
+  },
+  "evaluation": {
+    "clean_ceiling": 0.8,
+    "rows": {
+      "tau0.0": {
+        "gap": 0.142,
+        "risk": 0.242,
+        "coverage": 0.593,
+        "acc_at_dec": 0.758
+      },
+      "tau0.1": {
+        "gap": 0.142,
+        "risk": 0.242,
+        "coverage": 0.593,
+        "acc_at_dec": 0.758
+      },
+      "tau0.2": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      },
+      "tau0.3": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      },
+      "tau0.4": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      },
+      "tau0.5": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      },
+      "tau0.7": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      },
+      "tau0.9": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": NaN
+      }
+    },
+    "best_tau": "tau0.0",
+    "per_class": {},
+    "n_windows": 300,
+    "n_clips": 20
+  }
+}

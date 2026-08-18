@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+outputs/cache/
+data/
+.env
+
+# CLAP-FT checkpoints (~2.3 GB, reproducible via scripts/exp_clap_finetune.py)
+outputs/checkpoints_clap_finetune/

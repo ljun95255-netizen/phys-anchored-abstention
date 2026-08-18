@@ -1,0 +1,351 @@
+{
+ "wilson_ci": {
+  "FSD50K/B12_tau0.5": {
+   "n_decide": 3349,
+   "k_err": 1494,
+   "risk": 0.446,
+   "ci_lo": 0.4293,
+   "ci_hi": 0.463
+  },
+  "FSD50K/B12_tau0.95": {
+   "n_decide": 1238,
+   "k_err": 352,
+   "risk": 0.284,
+   "ci_lo": 0.2599,
+   "ci_hi": 0.3101
+  },
+  "FSD50K/B12a_true_snr": {
+   "n_decide": 3295,
+   "k_err": 1479,
+   "risk": 0.449,
+   "ci_lo": 0.4319,
+   "ci_hi": 0.4659
+  },
+  "FSD50K/B13_phys": {
+   "n_decide": 4140,
+   "k_err": 2045,
+   "risk": 0.494,
+   "ci_lo": 0.4787,
+   "ci_hi": 0.5092
+  },
+  "FSD50K/B11_sp": {
+   "n_decide": 3166,
+   "k_err": 722,
+   "risk": 0.228,
+   "ci_lo": 0.2138,
+   "ci_hi": 0.243
+  },
+  "FSD50K/B0_energy": {
+   "n_decide": 2889,
+   "k_err": 506,
+   "risk": 0.175,
+   "ci_lo": 0.1617,
+   "ci_hi": 0.1894
+  },
+  "FSD50K/AGRC": {
+   "n_decide": 74,
+   "k_err": 6,
+   "risk": 0.083,
+   "ci_lo": 0.0377,
+   "ci_hi": 0.1658
+  },
+  "SC10/B12_tau0.20": {
+   "n_decide": 37745,
+   "k_err": 3963,
+   "risk": 0.105,
+   "ci_lo": 0.1019,
+   "ci_hi": 0.1081
+  },
+  "SC10/B12_tau0.30": {
+   "n_decide": 37621,
+   "k_err": 3913,
+   "risk": 0.104,
+   "ci_lo": 0.101,
+   "ci_hi": 0.1071
+  },
+  "SC10/B12_tau0.40": {
+   "n_decide": 35505,
+   "k_err": 3408,
+   "risk": 0.096,
+   "ci_lo": 0.093,
+   "ci_hi": 0.0991
+  },
+  "SC10/B12_tau0.50": {
+   "n_decide": 33109,
+   "k_err": 2682,
+   "risk": 0.081,
+   "ci_lo": 0.0781,
+   "ci_hi": 0.084
+  },
+  "SC10/B12_tau0.60": {
+   "n_decide": 32144,
+   "k_err": 2057,
+   "risk": 0.064,
+   "ci_lo": 0.0614,
+   "ci_hi": 0.0667
+  },
+  "SC10/B12_tau0.70": {
+   "n_decide": 31381,
+   "k_err": 1695,
+   "risk": 0.054,
+   "ci_lo": 0.0516,
+   "ci_hi": 0.0566
+  },
+  "SC10/B12_tau0.80": {
+   "n_decide": 30460,
+   "k_err": 1340,
+   "risk": 0.044,
+   "ci_lo": 0.0417,
+   "ci_hi": 0.0464
+  },
+  "SC10/B12_tau0.90": {
+   "n_decide": 28896,
+   "k_err": 925,
+   "risk": 0.032,
+   "ci_lo": 0.03,
+   "ci_hi": 0.0341
+  },
+  "SC10/B12_tau0.95": {
+   "n_decide": 27177,
+   "k_err": 625,
+   "risk": 0.023,
+   "ci_lo": 0.0213,
+   "ci_hi": 0.0248
+  },
+  "SC10/B12a_true_snr": {
+   "n_decide": 32230,
+   "k_err": 2482,
+   "risk": 0.077,
+   "ci_lo": 0.0741,
+   "ci_hi": 0.08
+  },
+  "SC10/B13_phys_only": {
+   "n_decide": 37791,
+   "k_err": 4006,
+   "risk": 0.106,
+   "ci_lo": 0.1029,
+   "ci_hi": 0.1091
+  },
+  "SC10/B0_energy": {
+   "n_decide": 7822,
+   "k_err": 2573,
+   "risk": 0.329,
+   "ci_lo": 0.3186,
+   "ci_hi": 0.3394
+  },
+  "SC10/B11_sp": {
+   "n_decide": 9533,
+   "k_err": 3889,
+   "risk": 0.408,
+   "ci_lo": 0.3981,
+   "ci_hi": 0.4179
+  },
+  "SC10/oracle": {
+   "n_decide": 36666,
+   "k_err": 0,
+   "risk": 0.0,
+   "ci_lo": 0.0,
+   "ci_hi": 0.0001
+  },
+  "SC10/B11a_sp_oracle_thr": {
+   "n_decide": 36666,
+   "k_err": 0,
+   "risk": 0.0,
+   "ci_lo": 0.0,
+   "ci_hi": 0.0001
+  },
+  "US8K/B12_tau0.20": {
+   "n_decide": 7090,
+   "k_err": 3538,
+   "risk": 0.499,
+   "ci_lo": 0.4874,
+   "ci_hi": 0.5106
+  },
+  "US8K/B12_tau0.30": {
+   "n_decide": 6736,
+   "k_err": 3321,
+   "risk": 0.493,
+   "ci_lo": 0.4811,
+   "ci_hi": 0.505
+  },
+  "US8K/B12_tau0.40": {
+   "n_decide": 5811,
+   "k_err": 2702,
+   "risk": 0.465,
+   "ci_lo": 0.4522,
+   "ci_hi": 0.4778
+  },
+  "US8K/B12_tau0.50": {
+   "n_decide": 4996,
+   "k_err": 2098,
+   "risk": 0.42,
+   "ci_lo": 0.4063,
+   "ci_hi": 0.4337
+  },
+  "US8K/B12_tau0.60": {
+   "n_decide": 4546,
+   "k_err": 1782,
+   "risk": 0.392,
+   "ci_lo": 0.3779,
+   "ci_hi": 0.4063
+  },
+  "US8K/B12_tau0.70": {
+   "n_decide": 4070,
+   "k_err": 1477,
+   "risk": 0.363,
+   "ci_lo": 0.3483,
+   "ci_hi": 0.3778
+  },
+  "US8K/B12_tau0.80": {
+   "n_decide": 3581,
+   "k_err": 1171,
+   "risk": 0.327,
+   "ci_lo": 0.3118,
+   "ci_hi": 0.3425
+  },
+  "US8K/B12_tau0.90": {
+   "n_decide": 2917,
+   "k_err": 782,
+   "risk": 0.268,
+   "ci_lo": 0.2523,
+   "ci_hi": 0.2845
+  },
+  "US8K/B12_tau0.95": {
+   "n_decide": 2402,
+   "k_err": 540,
+   "risk": 0.225,
+   "ci_lo": 0.2086,
+   "ci_hi": 0.2419
+  },
+  "US8K/B12a_true_snr": {
+   "n_decide": 4965,
+   "k_err": 2095,
+   "risk": 0.422,
+   "ci_lo": 0.4083,
+   "ci_hi": 0.4357
+  },
+  "US8K/B13_phys_only": {
+   "n_decide": 7113,
+   "k_err": 3556,
+   "risk": 0.5,
+   "ci_lo": 0.4883,
+   "ci_hi": 0.5115
+  },
+  "US8K/B0_energy": {
+   "n_decide": 5004,
+   "k_err": 926,
+   "risk": 0.185,
+   "ci_lo": 0.1745,
+   "ci_hi": 0.1961
+  },
+  "US8K/B11_sp": {
+   "n_decide": 5546,
+   "k_err": 1298,
+   "risk": 0.234,
+   "ci_lo": 0.2231,
+   "ci_hi": 0.2454
+  },
+  "US8K/oracle": {
+   "n_decide": 7065,
+   "k_err": 0,
+   "risk": 0.0,
+   "ci_lo": 0.0,
+   "ci_hi": 0.0005
+  },
+  "US8K/B11a_sp_oracle_thr": {
+   "n_decide": 7065,
+   "k_err": 0,
+   "risk": 0.0,
+   "ci_lo": 0.0,
+   "ci_hi": 0.0005
+  }
+ },
+ "risk_le_alpha": {
+  "FSD50K/B12_tau0.5": {
+   "n": 3349,
+   "k": 1494,
+   "p_value": 1.0,
+   "reject_H0_risk_ge_alpha": false
+  },
+  "FSD50K/B12_tau0.95": {
+   "n": 1238,
+   "k": 352,
+   "p_value": 1.0,
+   "reject_H0_risk_ge_alpha": false
+  },
+  "SC10/B12_tau0.5": {
+   "n": 33109,
+   "k": 2682,
+   "p_value": 0.0,
+   "reject_H0_risk_ge_alpha": true
+  },
+  "SC10/B12_tau0.95": {
+   "n": 27177,
+   "k": 625,
+   "p_value": 0.0,
+   "reject_H0_risk_ge_alpha": true
+  },
+  "US8K/B12_tau0.5": {
+   "n": 4996,
+   "k": 2098,
+   "p_value": 1.0,
+   "reject_H0_risk_ge_alpha": false
+  }
+ },
+ "z_b12_vs_b12a": {
+  "FSD50K": {
+   "z": -0.237,
+   "p": 0.81247
+  },
+  "SC10": {
+   "z": 1.893,
+   "p": 0.05837
+  },
+  "US8K": {
+   "z": -0.204,
+   "p": 0.8384
+  }
+ },
+ "per_kind_ci": {
+  "SC10": {
+   "wind": {
+    "risk": 0.072,
+    "n": 10959,
+    "ci_lo": 0.0673,
+    "ci_hi": 0.077
+   },
+   "occlusion": {
+    "risk": 0.092,
+    "n": 11130,
+    "ci_lo": 0.0868,
+    "ci_hi": 0.0975
+   },
+   "self_motion": {
+    "risk": 0.079,
+    "n": 11020,
+    "ci_lo": 0.0741,
+    "ci_hi": 0.0842
+   }
+  },
+  "US8K": {
+   "wind": {
+    "risk": 0.39,
+    "n": 1711,
+    "ci_lo": 0.367,
+    "ci_hi": 0.4132
+   },
+   "occlusion": {
+    "risk": 0.471,
+    "n": 1639,
+    "ci_lo": 0.4469,
+    "ci_hi": 0.4952
+   },
+   "self_motion": {
+    "risk": 0.4,
+    "n": 1646,
+    "ci_lo": 0.3764,
+    "ci_hi": 0.4236
+   }
+  }
+ }
+}

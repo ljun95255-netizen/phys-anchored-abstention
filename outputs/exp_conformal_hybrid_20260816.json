@@ -1,0 +1,33 @@
+{
+  "tag": "20260816",
+  "ckpt": "sontra_a_ep22.pt",
+  "seed": 20260803,
+  "n_cal": 4500,
+  "n_cal_decidable": 2700,
+  "n_test": 2265,
+  "lambda_full_agrc": 0.9997,
+  "lambda_hybrid": 0.9997,
+  "rows": {
+    "agrc_full_domain": {
+      "gap": -0.017,
+      "risk": 0.083,
+      "coverage": 0.011
+    },
+    "hybrid_ideal_gate": {
+      "gap": -0.017,
+      "risk": 0.083,
+      "coverage": 0.011
+    },
+    "hybrid_deployable": {
+      "gap": -0.017,
+      "risk": 0.083,
+      "coverage": 0.011
+    },
+    "af_rule_b12_tau05": {
+      "gap": 0.33,
+      "risk": 0.43,
+      "coverage": 0.539
+    }
+  },
+  "note": "\u6821\u51c6\u57df = r_true \u2265 r_min\uff08oracle SNR \u754c\u5b9a\u7269\u7406\u53ef\u51b3\u7b56\u57df\uff09; ideal-gate \u7528 r_true\uff08\u6821\u51c6\u4fa7\u589e\u76ca\u4e0a\u754c\uff09, deployable \u7528 B11 SNR\u0302\uff08\u53ef\u90e8\u7f72\u7248, \u95e8\u8bef\u5dee\u8fdb\u5165\u98ce\u9669\uff09"
+}

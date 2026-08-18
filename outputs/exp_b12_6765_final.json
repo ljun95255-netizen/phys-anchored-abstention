@@ -1,0 +1,12 @@
+{
+  "B12_6765": {
+    "gap": 0.346,
+    "risk": 0.446,
+    "coverage": 0.495
+  },
+  "A_Head_corrupted_domain": {
+    "mae_mean_agg_db": 4.14,
+    "median_abs_err_db": 3.93,
+    "pearson_rhat_r": 0.949
+  }
+}

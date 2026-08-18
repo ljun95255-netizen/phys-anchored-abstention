@@ -1,0 +1,18 @@
+{
+  "B0_energy": {
+    "gap": 0.075,
+    "risk": 0.175,
+    "coverage": 0.427
+  },
+  "B11_sp": {
+    "gap": 0.128,
+    "risk": 0.228,
+    "coverage": 0.468
+  },
+  "B11a_oracle_thresh": {
+    "gap": -0.1,
+    "risk": 0.0,
+    "coverage": 0.6
+  },
+  "A_Head_snr_mae": 10.944
+}

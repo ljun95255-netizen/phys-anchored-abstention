@@ -1,0 +1,47 @@
+{
+  "k_windows": 5,
+  "event_grid": 4059,
+  "voting": [
+    {
+      "m": 1,
+      "acc_at_dec": 0.524,
+      "coverage": 1.0,
+      "n_dec": 4059
+    },
+    {
+      "m": 2,
+      "acc_at_dec": 0.516,
+      "coverage": 0.902,
+      "n_dec": 3663
+    },
+    {
+      "m": 3,
+      "acc_at_dec": 0.512,
+      "coverage": 0.807,
+      "n_dec": 3276
+    },
+    {
+      "m": 4,
+      "acc_at_dec": 0.503,
+      "coverage": 0.723,
+      "n_dec": 2936
+    },
+    {
+      "m": 5,
+      "acc_at_dec": 0.512,
+      "coverage": 0.656,
+      "n_dec": 2664
+    }
+  ],
+  "single_window_acc_at_dec": 0.452,
+  "best_window_acc_at_dec": 0.504,
+  "clip_win_dist": {
+    "0": 49,
+    "1": 44,
+    "2": 43,
+    "3": 37,
+    "4": 28,
+    "5": 299
+  },
+  "target": 0.825
+}

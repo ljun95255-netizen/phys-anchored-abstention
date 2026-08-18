@@ -1,0 +1,7 @@
+{
+  "multi_label_frac_phys": 0.16,
+  "single_label_acc_at_dec": 0.493,
+  "top1_hit": 0.504,
+  "top2_hit": 0.673,
+  "top3_hit": 0.786
+}

@@ -1,0 +1,160 @@
+{
+ "fsd50k10_per_class": {
+  "train": {
+   "0": 2782,
+   "1": 192,
+   "2": 154,
+   "3": 1177,
+   "4": 393,
+   "5": 1745,
+   "6": 715,
+   "7": 1161,
+   "8": 5273
+  },
+  "val": {
+   "0": 394,
+   "1": 19,
+   "2": 34,
+   "3": 103,
+   "4": 73,
+   "5": 289,
+   "6": 73,
+   "7": 153,
+   "8": 640
+  }
+ },
+ "fsd50k10_total": {
+  "train": 13592,
+  "val": 1778,
+  "clips": 40966
+ },
+ "sc10_per_word": {
+  "yes": 4044,
+  "no": 3941,
+  "up": 3723,
+  "down": 3917,
+  "left": 3801,
+  "right": 3778,
+  "on": 3845,
+  "off": 3745,
+  "stop": 3872,
+  "go": 3880
+ },
+ "sc10_split": {
+  "train": 30769,
+  "test": 4074,
+  "val": 3703
+ },
+ "us8k_per_class": {
+  "dog_bark": 1000,
+  "children_playing": 1000,
+  "car_horn": 429,
+  "air_conditioner": 1000,
+  "street_music": 1000,
+  "gun_shot": 374,
+  "siren": 929,
+  "engine_idling": 1000,
+  "jackhammer": 1000,
+  "drilling": 1000
+ },
+ "us8k_total": 8732,
+ "t2o": {
+  "wall_per_sample_db": -6.34,
+  "examples_s": {
+   "-35": null,
+   "-30": null,
+   "-27": null,
+   "-25": null,
+   "-20": null,
+   "-15": null,
+   "-10": null
+  },
+  "band_hz": 3000.0,
+  "alpha": 0.1,
+  "rho_db": 1.0
+ },
+ "sc10_per_class_acc": {
+  "yes": {
+   "n_dec": 3707,
+   "acc": 0.986
+  },
+  "no": {
+   "n_dec": 3276,
+   "acc": 0.931
+  },
+  "up": {
+   "n_dec": 3742,
+   "acc": 0.914
+  },
+  "down": {
+   "n_dec": 3388,
+   "acc": 0.931
+  },
+  "left": {
+   "n_dec": 3610,
+   "acc": 0.952
+  },
+  "right": {
+   "n_dec": 3485,
+   "acc": 0.964
+  },
+  "on": {
+   "n_dec": 3469,
+   "acc": 0.926
+  },
+  "off": {
+   "n_dec": 3505,
+   "acc": 0.831
+  },
+  "stop": {
+   "n_dec": 3626,
+   "acc": 0.963
+  },
+  "go": {
+   "n_dec": 418,
+   "acc": 0.132
+  }
+ },
+ "us8k_per_class_acc": {
+  "air_conditioner": {
+   "n_dec": 649,
+   "acc": 0.498
+  },
+  "car_horn": {
+   "n_dec": 124,
+   "acc": 0.29
+  },
+  "children_playing": {
+   "n_dec": 715,
+   "acc": 0.764
+  },
+  "dog_bark": {
+   "n_dec": 593,
+   "acc": 0.804
+  },
+  "drilling": {
+   "n_dec": 572,
+   "acc": 0.564
+  },
+  "engine_idling": {
+   "n_dec": 544,
+   "acc": 0.434
+  },
+  "gun_shot": {
+   "n_dec": 163,
+   "acc": 0.92
+  },
+  "jackhammer": {
+   "n_dec": 660,
+   "acc": 0.524
+  },
+  "siren": {
+   "n_dec": 628,
+   "acc": 0.672
+  },
+  "street_music": {
+   "n_dec": 315,
+   "acc": 0.032
+  }
+ }
+}

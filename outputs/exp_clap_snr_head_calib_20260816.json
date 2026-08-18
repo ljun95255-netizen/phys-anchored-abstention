@@ -1,0 +1,296 @@
+{
+  "tag": "20260816",
+  "n_cal": 300,
+  "seed": 20260803,
+  "n_windows": 11775,
+  "mae_calibration_split": {
+    "mae_before": 9.231727337167356,
+    "mae_after": 8.806548760274552,
+    "improvement": 0.42517857689280447
+  },
+  "mae_test": {
+    "learned_raw": 10.424657970084917,
+    "learned_calib": 9.344072865194502
+  },
+  "verdict": "CALIBRATED_GATE_NEAR_ALPHA",
+  "note": "\u6821\u51c6\u96c6 = fold 1-9 \u62bd 300 clips\uff08\u4e0e SNR \u5934\u8bad\u7ec3\u96c6\u540c\u57df, \u8bda\u5b9e\u62ab\u9732\uff09; \u6d4b\u8bd5\u96c6 fold 10 \u5b8c\u5168 hold-out; isotonic \u6821\u6b63 monotone \u4fdd\u5e8f",
+  "interpretation": "ATTAINS = \u6821\u51c6\u540e learned \u95e8 risk < \u03b1 \u4e14 p < 0.05 \u2192 \u5168 10 \u7c7b\u53ef\u90e8\u7f72\u6b63\u7ed3\u679c",
+  "rows": {
+    "learned_raw": {
+      "tau0.0": {
+        "gap": 0.165,
+        "risk": 0.265,
+        "coverage": 0.875,
+        "acc_at_dec": 0.735,
+        "n_decide": 10304,
+        "wilson_ci": [
+          0.727,
+          0.744
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.1": {
+        "gap": 0.165,
+        "risk": 0.265,
+        "coverage": 0.875,
+        "acc_at_dec": 0.735,
+        "n_decide": 10304,
+        "wilson_ci": [
+          0.727,
+          0.744
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.2": {
+        "gap": 0.164,
+        "risk": 0.264,
+        "coverage": 0.874,
+        "acc_at_dec": 0.736,
+        "n_decide": 10286,
+        "wilson_ci": [
+          0.728,
+          0.745
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.3": {
+        "gap": 0.14,
+        "risk": 0.24,
+        "coverage": 0.835,
+        "acc_at_dec": 0.76,
+        "n_decide": 9829,
+        "wilson_ci": [
+          0.751,
+          0.768
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.4": {
+        "gap": 0.095,
+        "risk": 0.195,
+        "coverage": 0.725,
+        "acc_at_dec": 0.805,
+        "n_decide": 8536,
+        "wilson_ci": [
+          0.796,
+          0.813
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.5": {
+        "gap": 0.032,
+        "risk": 0.132,
+        "coverage": 0.571,
+        "acc_at_dec": 0.868,
+        "n_decide": 6724,
+        "wilson_ci": [
+          0.859,
+          0.876
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.7": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      },
+      "tau0.9": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      }
+    },
+    "learned_calib": {
+      "tau0.0": {
+        "gap": 0.092,
+        "risk": 0.192,
+        "coverage": 0.723,
+        "acc_at_dec": 0.808,
+        "n_decide": 8516,
+        "wilson_ci": [
+          0.799,
+          0.816
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.1": {
+        "gap": 0.092,
+        "risk": 0.192,
+        "coverage": 0.723,
+        "acc_at_dec": 0.808,
+        "n_decide": 8516,
+        "wilson_ci": [
+          0.799,
+          0.816
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.2": {
+        "gap": 0.091,
+        "risk": 0.191,
+        "coverage": 0.722,
+        "acc_at_dec": 0.809,
+        "n_decide": 8502,
+        "wilson_ci": [
+          0.8,
+          0.817
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.3": {
+        "gap": 0.073,
+        "risk": 0.173,
+        "coverage": 0.699,
+        "acc_at_dec": 0.827,
+        "n_decide": 8228,
+        "wilson_ci": [
+          0.819,
+          0.835
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.4": {
+        "gap": 0.043,
+        "risk": 0.143,
+        "coverage": 0.636,
+        "acc_at_dec": 0.857,
+        "n_decide": 7491,
+        "wilson_ci": [
+          0.849,
+          0.865
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.5": {
+        "gap": 0.008,
+        "risk": 0.108,
+        "coverage": 0.541,
+        "acc_at_dec": 0.892,
+        "n_decide": 6366,
+        "wilson_ci": [
+          0.884,
+          0.899
+        ],
+        "p_onesided": 0.986
+      },
+      "tau0.7": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      },
+      "tau0.9": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      }
+    },
+    "oracle": {
+      "tau0.0": {
+        "gap": 0.067,
+        "risk": 0.167,
+        "coverage": 0.6,
+        "acc_at_dec": 0.833,
+        "n_decide": 7065,
+        "wilson_ci": [
+          0.824,
+          0.842
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.1": {
+        "gap": 0.067,
+        "risk": 0.167,
+        "coverage": 0.6,
+        "acc_at_dec": 0.833,
+        "n_decide": 7065,
+        "wilson_ci": [
+          0.824,
+          0.842
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.2": {
+        "gap": 0.067,
+        "risk": 0.167,
+        "coverage": 0.6,
+        "acc_at_dec": 0.833,
+        "n_decide": 7063,
+        "wilson_ci": [
+          0.824,
+          0.842
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.3": {
+        "gap": 0.059,
+        "risk": 0.159,
+        "coverage": 0.59,
+        "acc_at_dec": 0.841,
+        "n_decide": 6945,
+        "wilson_ci": [
+          0.833,
+          0.85
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.4": {
+        "gap": 0.033,
+        "risk": 0.133,
+        "coverage": 0.538,
+        "acc_at_dec": 0.867,
+        "n_decide": 6333,
+        "wilson_ci": [
+          0.859,
+          0.875
+        ],
+        "p_onesided": 1.0
+      },
+      "tau0.5": {
+        "gap": -0.005,
+        "risk": 0.095,
+        "coverage": 0.46,
+        "acc_at_dec": 0.905,
+        "n_decide": 5413,
+        "wilson_ci": [
+          0.897,
+          0.912
+        ],
+        "p_onesided": 0.126
+      },
+      "tau0.7": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      },
+      "tau0.9": {
+        "gap": NaN,
+        "risk": 0.0,
+        "coverage": 0.0,
+        "acc_at_dec": null,
+        "n_decide": 0,
+        "wilson_ci": null,
+        "p_onesided": null
+      }
+    }
+  }
+}

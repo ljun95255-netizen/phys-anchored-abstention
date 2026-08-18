@@ -1,0 +1,252 @@
+{
+  "tag": "20260816",
+  "model": "laion/clap-htsat-unfused",
+  "device": "mps",
+  "seed": 20260803,
+  "verdict": "NO_CONFIRM",
+  "interpretation": "SC-10 ratio < US8K \u4e14 < FSD50K-10 \u2192 \u4f4e\u5f02\u8d28\u6027\u2192\u9ad8\u5929\u82b1\u677f\u4e00\u81f4, \u53ef\u5199\u5165\u8bba\u6587; \u5426\u5219\u7ef4\u6301\u539f\u8bda\u5b9e\u53d9\u8ff0",
+  "results": {
+    "sc10": {
+      "n": 4074,
+      "ratio": 0.9172,
+      "per_class": {
+        "0": {
+          "n": 419,
+          "intra": 0.0717,
+          "inter": 0.0814,
+          "silhouette": 0.1192,
+          "nearest_class_margin": 0.0697
+        },
+        "1": {
+          "n": 405,
+          "intra": 0.0792,
+          "inter": 0.0854,
+          "silhouette": 0.0734,
+          "nearest_class_margin": 0.0721
+        },
+        "2": {
+          "n": 425,
+          "intra": 0.0775,
+          "inter": 0.0853,
+          "silhouette": 0.0919,
+          "nearest_class_margin": 0.0715
+        },
+        "3": {
+          "n": 406,
+          "intra": 0.0645,
+          "inter": 0.0767,
+          "silhouette": 0.1588,
+          "nearest_class_margin": 0.0656
+        },
+        "4": {
+          "n": 412,
+          "intra": 0.0789,
+          "inter": 0.0834,
+          "silhouette": 0.0546,
+          "nearest_class_margin": 0.0719
+        },
+        "5": {
+          "n": 396,
+          "intra": 0.0792,
+          "inter": 0.0839,
+          "silhouette": 0.0559,
+          "nearest_class_margin": 0.071
+        },
+        "6": {
+          "n": 396,
+          "intra": 0.0804,
+          "inter": 0.0817,
+          "silhouette": 0.0163,
+          "nearest_class_margin": 0.0696
+        },
+        "7": {
+          "n": 402,
+          "intra": 0.0732,
+          "inter": 0.0789,
+          "silhouette": 0.0716,
+          "nearest_class_margin": 0.066
+        },
+        "8": {
+          "n": 411,
+          "intra": 0.0693,
+          "inter": 0.0798,
+          "silhouette": 0.1318,
+          "nearest_class_margin": 0.0682
+        },
+        "9": {
+          "n": 402,
+          "intra": 0.0766,
+          "inter": 0.0812,
+          "silhouette": 0.0563,
+          "nearest_class_margin": 0.0673
+        }
+      },
+      "names": [
+        "yes",
+        "no",
+        "up",
+        "down",
+        "left",
+        "right",
+        "on",
+        "off",
+        "stop",
+        "go"
+      ]
+    },
+    "us8k": {
+      "n": 785,
+      "ratio": 0.6299,
+      "per_class": {
+        "0": {
+          "n": 100,
+          "intra": 0.0114,
+          "inter": 0.0531,
+          "silhouette": 0.7859,
+          "nearest_class_margin": 0.013
+        },
+        "1": {
+          "n": 23,
+          "intra": 0.0292,
+          "inter": 0.0597,
+          "silhouette": 0.5107,
+          "nearest_class_margin": 0.024
+        },
+        "2": {
+          "n": 99,
+          "intra": 0.08,
+          "inter": 0.093,
+          "silhouette": 0.1394,
+          "nearest_class_margin": 0.0604
+        },
+        "3": {
+          "n": 79,
+          "intra": 0.0934,
+          "inter": 0.1033,
+          "silhouette": 0.0959,
+          "nearest_class_margin": 0.078
+        },
+        "4": {
+          "n": 95,
+          "intra": 0.017,
+          "inter": 0.0529,
+          "silhouette": 0.6787,
+          "nearest_class_margin": 0.0141
+        },
+        "5": {
+          "n": 93,
+          "intra": 0.0116,
+          "inter": 0.0525,
+          "silhouette": 0.7796,
+          "nearest_class_margin": 0.0108
+        },
+        "6": {
+          "n": 20,
+          "intra": 0.0523,
+          "inter": 0.1266,
+          "silhouette": 0.5869,
+          "nearest_class_margin": 0.1036
+        },
+        "7": {
+          "n": 94,
+          "intra": 0.0089,
+          "inter": 0.0519,
+          "silhouette": 0.828,
+          "nearest_class_margin": 0.0123
+        },
+        "8": {
+          "n": 82,
+          "intra": 0.1472,
+          "inter": 0.1189,
+          "silhouette": -0.2387,
+          "nearest_class_margin": 0.0944
+        },
+        "9": {
+          "n": 100,
+          "intra": 0.0173,
+          "inter": 0.0522,
+          "silhouette": 0.6678,
+          "nearest_class_margin": 0.0166
+        }
+      },
+      "names": [
+        "air_conditioner",
+        "car_horn",
+        "children_playing",
+        "dog_bark",
+        "drilling",
+        "engine_idling",
+        "gun_shot",
+        "jackhammer",
+        "siren",
+        "street_music"
+      ]
+    },
+    "fsd50k10": {
+      "n": 451,
+      "ratio": 0.8239,
+      "per_class": {
+        "0": {
+          "n": 86,
+          "intra": 0.039,
+          "inter": 0.098,
+          "silhouette": 0.602,
+          "nearest_class_margin": 0.073
+        },
+        "3": {
+          "n": 45,
+          "intra": 0.1395,
+          "inter": 0.1465,
+          "silhouette": 0.0481,
+          "nearest_class_margin": 0.123
+        },
+        "4": {
+          "n": 60,
+          "intra": 0.1117,
+          "inter": 0.1202,
+          "silhouette": 0.0704,
+          "nearest_class_margin": 0.088
+        },
+        "5": {
+          "n": 70,
+          "intra": 0.0945,
+          "inter": 0.1173,
+          "silhouette": 0.1939,
+          "nearest_class_margin": 0.088
+        },
+        "6": {
+          "n": 65,
+          "intra": 0.0997,
+          "inter": 0.1144,
+          "silhouette": 0.1289,
+          "nearest_class_margin": 0.0678
+        },
+        "7": {
+          "n": 60,
+          "intra": 0.0993,
+          "inter": 0.1136,
+          "silhouette": 0.1256,
+          "nearest_class_margin": 0.0682
+        },
+        "8": {
+          "n": 65,
+          "intra": 0.1365,
+          "inter": 0.1388,
+          "silhouette": 0.017,
+          "nearest_class_margin": 0.1013
+        }
+      },
+      "names": [
+        "vehicle",
+        "bicycle",
+        "horn",
+        "siren",
+        "tire_squeal",
+        "impact",
+        "construction",
+        "mechanical_anomaly",
+        "human_activity"
+      ]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "tag": "20260816",
+  "dataset": "fsd50k10",
+  "model": "laion/clap-htsat-unfused",
+  "epochs": 6,
+  "lr": 0.0001,
+  "batch": 16,
+  "freeze_blocks": 8,
+  "seed": 20260803,
+  "device": "mps",
+  "n_train_clips": 12724,
+  "ckpt": "/Users/yufeifan/Documents/papers/eaai/project/scripts/../outputs/checkpoints_clap_finetune/clap_ft_fsd50k10_20260816.pt",
+  "verdict": "CEILING_LIFTED",
+  "interpretation": "acc_at_dec \u2265 0.822 \u2192 \u5929\u82b1\u677f\u62ac\u8d77, \u5934\u6761\u8f6c\u6b63, \u91cd\u5199\u5b9e\u9a8c/\u8ba8\u8bba; < 0.822 \u2192 \u4efb\u52a1\u5b9a\u4e49\u5929\u82b1\u677f\u83b7\u5f3a\u8868\u793a\u7ea7\u8bc1\u636e, \u53d9\u4e8b\u52a0\u5f3a",
+  "counterfactual": {
+    "to_beat_anchor": 0.822,
+    "to_reach_alpha": 0.9,
+    "sontra_a_ref": 0.58,
+    "clap_zs_ref": 0.181
+  },
+  "evaluation": {
+    "clean_ceiling": 0.826,
+    "rows": {
+      "tau0.0": {
+        "gap": 0.152,
+        "risk": 0.252,
+        "coverage": 0.332,
+        "acc_at_dec": 0.748
+      },
+      "tau0.1": {
+        "gap": 0.152,
+        "risk": 0.252,
+        "coverage": 0.332,
+        "acc_at_dec": 0.748
+      },
+      "tau0.2": {
+        "gap": 0.152,
+        "risk": 0.252,
+        "coverage": 0.332,
+        "acc_at_dec": 0.748
+      },
+      "tau0.3": {
+        "gap": 0.137,
+        "risk": 0.237,
+        "coverage": 0.319,
+        "acc_at_dec": 0.763
+      },
+      "tau0.4": {
+        "gap": 0.101,
+        "risk": 0.201,
+        "coverage": 0.271,
+        "acc_at_dec": 0.799
+      },
+      "tau0.5": {
+        "gap": 0.051,
+        "risk": 0.151,
+        "coverage": 0.235,
+        "acc_at_dec": 0.849
+      },
+      "tau0.7": {
+        "gap": -0.026,
+        "risk": 0.074,
+        "coverage": 0.163,
+        "acc_at_dec": 0.926
+      },
+      "tau0.9": {
+        "gap": -0.077,
+        "risk": 0.023,
+        "coverage": 0.075,
+        "acc_at_dec": 0.977
+      }
+    },
+    "best_tau": "tau0.9",
+    "per_class": {
+      "vehicle": {
+        "acc": 0.866,
+        "n": 1012
+      },
+      "siren": {
+        "acc": 0.526,
+        "n": 361
+      },
+      "impact": {
+        "acc": 0.798,
+        "n": 856
+      },
+      "mechanical_anomaly": {
+        "acc": 0.817,
+        "n": 513
+      },
+      "human_activity": {
+        "acc": 0.907,
+        "n": 2722
+      }
+    },
+    "n_windows": 23220,
+    "n_clips": 1548
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "tag": "20260816",
+  "dataset": "us8k",
+  "ckpt": "clap_ft_us8k_20260816.pt",
+  "seed": 20260803,
+  "r_min_db": -11.085,
+  "n_windows": 11775,
+  "verdict": "ORACLE_GATE_ATTAINS_ALPHA",
+  "interpretation": "oracle \u95e8\uff08r_true \u2265 r_min\uff09\u66ff\u4ee3 B11 SNR\u0302 \u95e8; ATTAINS \u2192 \u6b8b\u4f59\u5931\u8d25\u662f\u95e8\u5931\u914d\uff08\u5de5\u7a0b\u53ef\u4fee\uff09; BELOW \u2192 \u6b8b\u4f59\u5931\u8d25\u662f\u4efb\u52a1\u7ed3\u6784",
+  "reference": {
+    "b11_tau05": {
+      "gap": 0.036,
+      "risk": 0.136,
+      "coverage": 0.303,
+      "acc_at_dec": 0.864
+    },
+    "b11_tau0": {
+      "gap": 0.173,
+      "risk": 0.273,
+      "coverage": 0.471,
+      "acc_at_dec": 0.727
+    }
+  },
+  "rows_b11_gate": {
+    "tau0.0": {
+      "gap": 0.173,
+      "risk": 0.273,
+      "coverage": 0.471,
+      "acc_at_dec": 0.727
+    },
+    "tau0.1": {
+      "gap": 0.173,
+      "risk": 0.273,
+      "coverage": 0.471,
+      "acc_at_dec": 0.727
+    },
+    "tau0.2": {
+      "gap": 0.17,
+      "risk": 0.27,
+      "coverage": 0.469,
+      "acc_at_dec": 0.73
+    },
+    "tau0.3": {
+      "gap": 0.139,
+      "risk": 0.239,
+      "coverage": 0.44,
+      "acc_at_dec": 0.761
+    },
+    "tau0.4": {
+      "gap": 0.091,
+      "risk": 0.191,
+      "coverage": 0.375,
+      "acc_at_dec": 0.809
+    },
+    "tau0.5": {
+      "gap": 0.036,
+      "risk": 0.136,
+      "coverage": 0.303,
+      "acc_at_dec": 0.864
+    },
+    "tau0.7": {
+      "gap": NaN,
+      "risk": 0.0,
+      "coverage": 0.0,
+      "acc_at_dec": null
+    },
+    "tau0.9": {
+      "gap": NaN,
+      "risk": 0.0,
+      "coverage": 0.0,
+      "acc_at_dec": null
+    }
+  },
+  "rows_oracle_gate": {
+    "tau0.0": {
+      "gap": 0.067,
+      "risk": 0.167,
+      "coverage": 0.6,
+      "acc_at_dec": 0.833
+    },
+    "tau0.1": {
+      "gap": 0.067,
+      "risk": 0.167,
+      "coverage": 0.6,
+      "acc_at_dec": 0.833
+    },
+    "tau0.2": {
+      "gap": 0.067,
+      "risk": 0.167,
+      "coverage": 0.6,
+      "acc_at_dec": 0.833
+    },
+    "tau0.3": {
+      "gap": 0.059,
+      "risk": 0.159,
+      "coverage": 0.59,
+      "acc_at_dec": 0.841
+    },
+    "tau0.4": {
+      "gap": 0.033,
+      "risk": 0.133,
+      "coverage": 0.538,
+      "acc_at_dec": 0.867
+    },
+    "tau0.5": {
+      "gap": -0.005,
+      "risk": 0.095,
+      "coverage": 0.46,
+      "acc_at_dec": 0.905
+    },
+    "tau0.7": {
+      "gap": NaN,
+      "risk": 0.0,
+      "coverage": 0.0,
+      "acc_at_dec": null
+    },
+    "tau0.9": {
+      "gap": NaN,
+      "risk": 0.0,
+      "coverage": 0.0,
+      "acc_at_dec": null
+    }
+  }
+}

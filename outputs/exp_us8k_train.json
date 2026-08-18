@@ -1,0 +1,54 @@
+{
+  "manifest": {
+    "n_train_clips": 6571,
+    "n_val_clips": 441,
+    "n_test_clips": 785,
+    "dropped_train": 567,
+    "dropped_test": 52,
+    "class_counts_train": {
+      "2": 798,
+      "3": 648,
+      "0": 800,
+      "9": 800,
+      "6": 202,
+      "8": 786,
+      "5": 792,
+      "7": 763,
+      "4": 734,
+      "1": 248
+    },
+    "class_counts_test": {
+      "1": 23,
+      "3": 79,
+      "2": 99,
+      "5": 93,
+      "9": 100,
+      "4": 95,
+      "0": 100,
+      "6": 20,
+      "8": 82,
+      "7": 94
+    },
+    "classes": [
+      "air_conditioner",
+      "car_horn",
+      "children_playing",
+      "dog_bark",
+      "drilling",
+      "engine_idling",
+      "gun_shot",
+      "jackhammer",
+      "siren",
+      "street_music"
+    ]
+  },
+  "best_snr_mae": 0.11787028315048369,
+  "args": {
+    "limit": 0,
+    "quota": 800,
+    "epochs": 45,
+    "batch": 64,
+    "device": "mps"
+  },
+  "ckpt_dir": "/Users/yufeifan/Documents/Sontra/papers/icassp2027/scripts/../outputs/checkpoints_us8k"
+}
