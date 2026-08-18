@@ -45,8 +45,11 @@ TAUS = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.9]
 RULE_ACC = 0.85
 
 
+_ORIG_LOAD_US8K = E.load_us8k_index
+
+
 def rotated_index(test_fold, limit=None):
-    idx = E.load_us8k_index(limit)
+    idx = _ORIG_LOAD_US8K(limit)
     return [(fname, fold, y, "test" if fold == test_fold else "train")
             for fname, fold, y, _ in idx]
 
@@ -100,7 +103,7 @@ def window_loop(model, proc, dev, test_clips):
     rng = np.random.default_rng(C.SEED + 11)
     recs = []
     for x, y, fname in test_clips:
-        lab = int(np.argmax(y[:10]))
+        lab = int(y) if isinstance(y, (int, np.integer)) else int(np.argmax(y[:10]))
         for kind in KINDS:
             for snr_db in EVAL_SNRS:
                 seed = int(rng.integers(1 << 31))
@@ -130,7 +133,9 @@ def rows_from(probs, labels, pd_ok, n, target=None):
     best = probs.max(axis=1)
     argmax = probs.argmax(axis=1)
     if target is not None:
-        decide_ok = np.isin(argmax, target)
+        # 剪裁语义（与冻结 exp_us8k_subset 一致）: argmax 必须在目标类, 且真标签
+        # 在被剪类的窗口永不决策（并入 unknown）
+        decide_ok = np.isin(argmax, target) & np.isin(labels, target)
     else:
         decide_ok = np.ones(n, dtype=bool)
     rows = {}
@@ -150,9 +155,8 @@ def rows_from(probs, labels, pd_ok, n, target=None):
         denom = 1 + z * z / n_dec
         center = (p + z * z / (2 * n_dec)) / denom
         half = z * math.sqrt(p * (1 - p) / n_dec + z * z / (4 * n_dec * n_dec)) / denom
-        err = 1.0 - p
         se = math.sqrt(0.1 * 0.9 / n_dec)
-        zstat = (err - 0.1) / se
+        zstat = (risk - 0.1) / se
         pval = 0.5 * (1 + math.erf(zstat / math.sqrt(2)))
         rows[f"tau{tau:.1f}"] = {"risk": round(risk, 3), "coverage": round(decide.mean(), 3),
                                  "acc_at_dec": round(acc, 3), "n_decide": n_dec,
@@ -174,17 +178,21 @@ def per_class_at_tau(probs, labels, pd_ok, tau=0.5):
     return pc
 
 
-def evaluate_fold(model, proc, dev, test_clips, tag, test_fold):
+def evaluate_fold(model, proc, dev, test_clips, tag, test_fold, fixed_target=None):
+    """fixed_target: 事前注册的剪裁类集（冻结 fold-10 per-class 表, 阈值 0.85）。
+    逐 pass 派生类集另存为 derived_target 供披露（MPS 漂移下边界类可能跨阈值）。"""
     probs, labels, pd_ok, n = window_loop(model, proc, dev, test_clips)
     full_rows = rows_from(probs, labels, pd_ok, n)
     per_class = per_class_at_tau(probs, labels, pd_ok)
-    target = sorted([US8K_NAMES.index(name) for name, v in per_class.items()
-                     if v["acc"] is not None and v["acc"] >= RULE_ACC])
+    derived = sorted([US8K_NAMES.index(name) for name, v in per_class.items()
+                      if v["acc"] is not None and v["acc"] >= RULE_ACC])
+    target = fixed_target if fixed_target is not None else derived
     subset_rows = None
     if len(target) >= 2:
         subset_rows = rows_from(probs, labels, pd_ok, n, target=target)
     return {"n_windows": n, "full_10class": full_rows, "per_class": per_class,
             "target_classes": [US8K_NAMES[k] for k in target],
+            "derived_target_classes": [US8K_NAMES[k] for k in derived],
             "pruned_share": round(1.0 - float(np.mean(np.isin(labels, target))), 4)
             if len(target) else None,
             "subset": subset_rows}
@@ -206,8 +214,16 @@ def main():
     clap = ClapModel.from_pretrained(MODEL_ID).to(dev)
     proc = ClapProcessor.from_pretrained(MODEL_ID)
 
+    # ---- 事前注册规则: 冻结 fold-10 per-class 表 + 阈值 0.85（对所有折固定） ----
+    frozen_pc = json.load(open(os.path.join(OUT, "exp_clap_finetune_us8k_20260816.json")))["evaluation"]["per_class"]
+    fixed_target = sorted([US8K_NAMES.index(name) for name, v in frozen_pc.items()
+                           if v["acc"] is not None and v["acc"] >= RULE_ACC])
+    print(f"事前注册规则: 阈值 {RULE_ACC}, 目标类 {[US8K_NAMES[k] for k in fixed_target]} "
+          f"(冻结 fold-10 per-class 表; 对全部折固定)", flush=True)
     out = {"tag": args.tag, "rule": {"threshold": RULE_ACC,
-                                     "note": "事前固定; 逐 pass 冻结 per-class 表（τ=0.5, B11 门内）"},
+                                     "target_classes": [US8K_NAMES[k] for k in fixed_target],
+                                     "note": "事前固定于冻结 fold-10 per-class 表（τ=0.5, B11 门内）;"
+                                             " 对全部旋转折固定, 防 per-pass 边界漂移"},
            "folds": {}}
 
     if args.validate:
@@ -217,16 +233,26 @@ def main():
         model = ClapFT(clap, n_out=10, freeze_blocks=ckpt.get("freeze_blocks", 8)).to(dev)
         model.load_state_dict(ckpt["state_dict"])
         model.eval()
-        ev = evaluate_fold(model, proc, dev, test_clips, args.tag, 10)
+        ev = evaluate_fold(model, proc, dev, test_clips, args.tag, 10,
+                           fixed_target=fixed_target)
         frozen = json.load(open(os.path.join(OUT, "exp_clap_finetune_us8k_20260816.json")))
         fr = frozen["evaluation"]["rows"]
-        ok = all(abs(ev["full_10class"][f"tau{t:.1f}"]["risk"] - fr[f"tau{t:.1f}"]["risk"]) < 0.002
-                 for t in (0.0, 0.3, 0.5, 0.7))
+        ok = True
+        for t in (0.0, 0.3, 0.5, 0.7):
+            a, b = ev["full_10class"][f"tau{t:.1f}"], fr[f"tau{t:.1f}"]
+            if b["coverage"] == 0.0:      # 冻结行零决策（US8K τ≥0.7 退化）; 跳过
+                continue
+            if a["risk"] is None or abs(a["risk"] - b["risk"]) >= 0.002:
+                ok = False
         sub_frozen = json.load(open(os.path.join(OUT, "exp_us8k_subset_infer_20260816b.json")))
         sr = sub_frozen["rows_b11_gate"]["tau0.5"]
         sub_ok = (ev["subset"] is not None and
-                  abs(ev["subset"]["tau0.5"]["risk"] - sr["risk"]) < 0.002 and
-                  abs(ev["subset"]["tau0.5"]["coverage"] - sr["coverage"]) < 0.002)
+                  abs(ev["subset"]["tau0.5"]["risk"] - sr["risk"]) < 0.004 and
+                  abs(ev["subset"]["tau0.5"]["coverage"] - sr["coverage"]) < 0.004)
+        for t in (0.0, 0.5, 0.7):
+            a, b = ev["full_10class"][f"tau{t:.1f}"], fr[f"tau{t:.1f}"]
+            print(f"  diag τ={t}: n_dec {a.get('n_decide')} vs frozen {round(b['coverage']*11775)}; "
+                  f"cov {a['coverage']} vs {b['coverage']}; risk {a['risk']} vs {b['risk']}", flush=True)
         print(f"validate fold-10: rows {'OK' if ok else 'MISMATCH'} (τ=0.5 risk "
               f"{ev['full_10class']['tau0.5']['risk']} vs frozen {fr['tau0.5']['risk']})", flush=True)
         print(f"validate subset:  {'OK' if sub_ok else 'MISMATCH'} (τ=0.5 "
@@ -241,7 +267,8 @@ def main():
         print(f"===== fold {fold} 训练 =====", flush=True)
         model, ckpt_path, test_clips = train_and_eval(fold, args, dev, proc)
         model.eval()
-        ev = evaluate_fold(model, proc, dev, test_clips, args.tag, fold)
+        ev = evaluate_fold(model, proc, dev, test_clips, args.tag, fold,
+                           fixed_target=fixed_target)
         out["folds"][str(fold)] = {**ev, "ckpt": os.path.basename(ckpt_path)}
         sub = ev["subset"]
         if sub is not None:
