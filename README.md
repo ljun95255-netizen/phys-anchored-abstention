@@ -186,4 +186,4 @@ are only folded into the paper if they confirm (rules in `integration_drafts.md`
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Apache License 2.0 — see [LICENSE](LICENSE).
