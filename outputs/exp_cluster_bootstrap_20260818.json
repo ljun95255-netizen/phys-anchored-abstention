@@ -1,0 +1,30 @@
+{
+  "tag": "20260818",
+  "note": "\u91cd\u7b97\u81ea\u51bb\u7ed3 checkpoint\uff08\u975e R19 \u51bb\u7ed3 pass\uff09; clip \u7ea7 bootstrap, n_boot=1000, seed=20260804; \u7a97\u53e3\u7ea7\u533a\u95f4=\u51bb\u7ed3 Wilson CI; FSD50K-10 \u63a2\u9488\u70b9\u4f30\u8ba1 0.077 vs \u51bb\u7ed3 0.074 = MPS \u975e\u4f4d\u590d\u73b0\u6f02\u79fb\uff08<=0.003, README \u5bb9\u5dee\uff09",
+  "method": "cluster bootstrap by source clip (windows of same clip sampled together)",
+  "results": {
+    "fsd50k10_probe_tau0.7": {
+      "n_windows": 23220,
+      "n_clips": 1548,
+      "n_decide": 3795,
+      "risk": {
+        "point": 0.074,
+        "clip_ci": [
+          0.058,
+          0.095
+        ],
+        "window_ci": [
+          0.066,
+          0.083
+        ]
+      },
+      "coverage": {
+        "point": 0.163,
+        "clip_ci": [
+          0.152,
+          0.174
+        ]
+      }
+    }
+  }
+}
