@@ -1,0 +1,75 @@
+{
+  "tag": "20260818",
+  "model": "laion/clap-htsat-unfused",
+  "seed": 20260803,
+  "basis": "\u51bb\u7ed3\u7f13\u5b58 clap_emb_*_20260816.npy\uff08\u5148\u4f4d\u7ea7\u590d\u73b0\u51bb\u7ed3 per-class\uff09+ \u65b0\u5d4c horn \u5b50\u96c6",
+  "frozen_ratios": {
+    "sc10": 0.9172,
+    "us8k": 0.6299,
+    "fsd50k10": 0.8239
+  },
+  "matched_classes": {
+    "siren": {
+      "us8k": {
+        "n": 82,
+        "intra": 0.1472,
+        "inter": 0.1189,
+        "ratio": 1.2387,
+        "silhouette": -0.2387,
+        "nearest_class_margin": 0.0944
+      },
+      "fsd50k10": {
+        "n": 45,
+        "intra": 0.1395,
+        "inter": 0.1465,
+        "ratio": 0.9519,
+        "silhouette": 0.0481,
+        "nearest_class_margin": 0.123
+      }
+    },
+    "horn": {
+      "us8k": {
+        "n": 23,
+        "intra": 0.0292,
+        "inter": 0.0597,
+        "ratio": 0.4893,
+        "silhouette": 0.5107,
+        "nearest_class_margin": 0.024
+      },
+      "fsd50k10": {
+        "n": 33,
+        "intra": 0.1203,
+        "inter": 0.1227,
+        "ratio": 0.9805,
+        "silhouette": 0.0195,
+        "nearest_class_margin": 0.0875
+      }
+    },
+    "vehicle_approx": {
+      "us8k": {
+        "n": 93,
+        "intra": 0.0116,
+        "inter": 0.0525,
+        "ratio": 0.2204,
+        "silhouette": 0.7796,
+        "nearest_class_margin": 0.0108
+      },
+      "fsd50k10": {
+        "n": 86,
+        "intra": 0.039,
+        "inter": 0.098,
+        "ratio": 0.398,
+        "silhouette": 0.602,
+        "nearest_class_margin": 0.073
+      }
+    }
+  },
+  "notes": [],
+  "verdict": "REJECTION_STANDS",
+  "interpretation": "\u63a7\u5236\u4e8b\u4ef6\u7c7b\u578b\u540e\u5339\u914d\u6bd4\u8f83\u4e0d\u4e00\u81f4\u914d\u5bf9\u6570 = 2/3; \u4e14 SC-10 \u81c2(ratio 0.92, \u51b3\u5b9a\u6027\u8bc1\u636e)\u4e0d\u53d7\u5339\u914d\u5f71\u54cd \u2014 \u539f\u62d2\u7edd\u7ed3\u8bba\u672a\u88ab\u6551\u6d3b",
+  "pair_notes": [
+    "siren: us8k 1.2387 vs fsd50k10 0.9519 \u2014 \u4e0e\u5047\u8bbe\u4e00\u81f4",
+    "horn: us8k 0.4893 vs fsd50k10 0.9805 \u2014 \u4e0e\u5047\u8bbe\u77db\u76fe",
+    "vehicle_approx: us8k 0.2204 vs fsd50k10 0.398 \u2014 \u4e0e\u5047\u8bbe\u77db\u76fe"
+  ]
+}

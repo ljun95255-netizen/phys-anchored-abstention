@@ -162,6 +162,25 @@ re-run or modify any frozen R19 number.
 | `scripts/exp_clap_finetune.py` | Does fine-tuned CLAP lift the decidable-region ceiling (acc@dec ≥ 82.2%)? | ~1–4 h per dataset |
 | `scripts/exp_conformal_hybrid.py` | Does conformal risk control regain coverage when calibrated within the decidable region? | ~30–60 min |
 
+## Supplementary-material experiments (added 2026-08-18)
+
+Pre-submission quick wins behind the supplementary material
+(`paper/supplementary.tex`). All are new records computed from frozen checkpoints /
+frozen JSONs; aggregates are verified bit-exact against the frozen records before
+any derived number is written.
+
+| Script | What it produces | Run time |
+|---|---|---|
+| `scripts/exp_cluster_bootstrap.py` | Clip-level (cluster) bootstrap 95% intervals for the three headline risk numbers (SC-10 B12, US8K B12, FSD50K-10 probe) | ~40 min |
+| `scripts/make_tau_tables.py` | Full τ-sweep tables + per-class tables with Wilson intervals and one-sided z/p → `paper/supp_tables.tex` | seconds |
+| `scripts/fig_rc_curves.py` | Risk–coverage curves (B12 + probe + oracle) for the three datasets | seconds |
+| `scripts/exp_heterogeneity_matched.py` | Matched-event-type retest of the heterogeneity ratio (siren / horn / vehicle-approx) | ~5–10 min |
+| `scripts/exp_us8k_fold_recheck.py` | 3-fold rotation recheck of the class-level task redefinition (0.005@0.158) — `--validate` first reproduces the frozen fold-10 record | ~1.5 h/fold |
+| `e0_reference/rho_scan.py` | Noise-power-uncertainty ρ-scan (wall vs CFAR) at the frontier + real-noise mismatch panel | ~1 min |
+
+The outputs land as `outputs/exp_*_20260818.json` and `outputs/fig_supp_*`,
+referenced from `paper/supplementary.tex`.
+
 ```bash
 python scripts/exp_heterogeneity.py --device mps
 python scripts/exp_clap_finetune.py --dataset us8k --smoke 16   # 管线自检
